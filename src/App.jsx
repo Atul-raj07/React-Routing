@@ -6,6 +6,7 @@ import Home from './Components/Home'
 import Services from './Components/Services'
 import Product from './Components/product'
 import ProductItems from './Components/ProductItems'
+import NotFound from './Components/NotFound'
 
 const App = () => {
   return (
@@ -15,8 +16,10 @@ const App = () => {
         <Route path='/' element={<Home />} />
         <Route path='/About' element={<About />} />
         <Route path='/services' element={<Services />} />
-        <Route path='/products' element={<Product />} />
+        <Route path='/products' element={<Product />} >
         <Route path='/products/:items' element={<ProductItems />} />
+        </Route>
+        <Route path='*' element={<NotFound />} />
         </Routes>
     </div>
   )
